@@ -27,11 +27,15 @@ fn car_factory(color: String, transmission: Transmission, convertible: bool)-> C
 
 pub fn make_car(){
     let mut car = car_factory(String::from("Red"), Transmission::Manual, false);
-    println!("Car 1 = {}, {:#?} transmission, convertible: {}, mileage: {}", car.color, car.transmission, car.convertible, car.mileage);
+    println!("Car 1 = {}, {:?} transmission, convertible: {}, mileage: {}", car.color, car.transmission, car.convertible, car.mileage);
+    //puedes darle formato a valores como los enums usando {:?}.
 
     car = car_factory(String::from("Silver"), Transmission::Automatic, true);
     println!("Car 2 = {}, {:#?} transmission, convertible: {}, mileage: {}", car.color, car.transmission, car.convertible, car.mileage);
+    //el {:#/} en esencia es lo mismo, solo que añade sangrias, donde lo necesite para que sea mas legible.
 
     car = car_factory(String::from("Yellow"), Transmission::SemiAuto, false);
     println!("Car 3 = {}, {:#?} transmission, convertible: {}, mileage: {}", car.color, car.transmission, car.convertible, car.mileage);    
+
+    //esto formatos {:?} y {:#?} sirven igual que el toString en java, es como que saca los atributos y les da una forma en que se pueda leer, esta chido.
 }
